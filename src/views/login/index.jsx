@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
-import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import { Form } from '@ant-design/compatible';
-import '@ant-design/compatible/assets/index.css';
+import { LockOutlined, UserOutlined } from "@ant-design/icons";
+import { Form } from "@ant-design/compatible";
+import "@ant-design/compatible/assets/index.css";
 import { Input, Button, message, Spin } from "antd";
 import { connect } from "react-redux";
 import DocumentTitle from "react-document-title";
@@ -77,9 +77,7 @@ const Login = (props) => {
                 initialValue: "admin", // 初始值
               })(
                 <Input
-                  prefix={
-                    <UserOutlined style={{ color: "rgba(0,0,0,.25)" }} />
-                  }
+                  prefix={<UserOutlined style={{ color: "rgba(0,0,0,.25)" }} />}
                   placeholder="用户名"
                 />
               )}
@@ -96,9 +94,7 @@ const Login = (props) => {
                 initialValue: "123456", // 初始值
               })(
                 <Input
-                  prefix={
-                    <LockOutlined style={{ color: "rgba(0,0,0,.25)" }} />
-                  }
+                  prefix={<LockOutlined style={{ color: "rgba(0,0,0,.25)" }} />}
                   type="password"
                   placeholder="密码"
                 />
@@ -114,11 +110,8 @@ const Login = (props) => {
               </Button>
             </Form.Item>
             <Form.Item>
-              <span>账号 : admin 密码 : 随便填</span>
+              <span>账号 : admin 密码 : 123456</span>
               <br />
-              <span>账号 : editor 密码 : 随便填</span>
-              <br />
-              <span>账号 : guest 密码 : 随便填</span>
             </Form.Item>
           </Spin>
         </Form>
