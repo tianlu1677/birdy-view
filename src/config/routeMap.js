@@ -25,6 +25,12 @@ const User = Loadable({loader: () => import(/*webpackChunkName:'User'*/'@/views/
 const About = Loadable({loader: () => import(/*webpackChunkName:'About'*/'@/views/about'),loading: Loading});
 const Bug = Loadable({loader: () => import(/*webpackChunkName:'Bug'*/'@/views/bug'),loading: Loading});
 
+// componets demo
+const Buttons = Loadable({loader: () => import(/*webpackChunkName:'Bug'*/'@/views/components-demo/buttons'),loading: Loading});
+const Baselayout = Loadable({loader: () => import(/*webpackChunkName:'Bug'*/'@/views/components-demo/baselayout'),loading: Loading});
+const Nav = Loadable({loader: () => import(/*webpackChunkName:'Bug'*/'@/views/components-demo/nav'),loading: Loading});
+
+
 export default [
   { path: "/dashboard", component: Dashboard, roles: ["admin","editor","guest"] },
   { path: "/doc", component: Doc, roles: ["admin","editor","guest"] },
@@ -36,6 +42,9 @@ export default [
   { path: "/components/richTextEditor", component: RichTextEditor, roles: ["admin","editor"] },
   { path: "/components/Markdown", component: Markdown, roles: ["admin","editor"] },
   { path: "/components/draggable", component: Draggable, roles: ["admin","editor"] },
+  { path: "/components/buttons", component: Buttons, roles: ["admin","editor"] },
+  { path: "/components/baselayout", component: Baselayout, roles: ["admin","editor"] },
+  { path: "/components/nav", component: Nav, roles: ["admin","editor"] },
   { path: "/charts/keyboard", component: KeyboardChart, roles: ["admin","editor"] },
   { path: "/charts/line", component: LineChart, roles: ["admin","editor"] },
   { path: "/charts/mix-chart", component: MixChart, roles: ["admin","editor"] },
